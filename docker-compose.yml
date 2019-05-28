@@ -1,0 +1,16 @@
+version: '2'
+services:
+  web:
+      build: .
+      ports:
+        - "5400:5400"
+      environment:
+        - APP_SETTINGS=config.DevelopmentConfig
+        - DATABASE_URL=postgresql://giaphong:123gnohp123@localhost:5432/chatbot_web
+        - BASE_API_URL=192.168.1.33:5000
+      volumes:
+        - .:/code
+      depends_on:
+        - redis
+  redis:
+    image: redis

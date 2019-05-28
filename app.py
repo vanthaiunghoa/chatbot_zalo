@@ -11,7 +11,6 @@ app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-access_token = "dk8HLjdGNtULvXzLrzrGVP7d7bpSoWL_-Rai5zAD4MVmpLKVog96JCVWSWBWZ7ugtifn2zFvNodna4vKqy5e7VY0BLo-pNOE_gGtQVoLCX_i-pv7hB8a4QpOEK-Qhtq9l9Gp897uFsVGbWybbEC33Qca7MoUnXagWfeNVxFWK2MTfcTGXl1m4i6rCJgDy0CTbhiCDAIC3co3kamAmDrDIDVdSnV6a7H3v-HuQiUaDadXzpSQnDabU_IG41tI-nOrwijKRjAcIGR3bMbGT0Ds4TdFL74"
 headers = {"Content-Type": "application/json"}
 url = "https://openapi.zalo.me/v2.0/oa/message?access_token={}".format(access_token)
 redis = Redis('localhost')
